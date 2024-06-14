@@ -1,0 +1,21 @@
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+.app-modpacks {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.app-modpacks-none {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    z-index: 1;
+}
+
+.app-modpacks-row {
+    display: flex;
+    flex-direction: row;
+}

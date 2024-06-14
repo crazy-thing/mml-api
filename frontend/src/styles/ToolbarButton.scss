@@ -1,0 +1,31 @@
+.toolbar-button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    justify-self: start!important;
+    align-self: center!important;
+
+    width: 230px;
+    height: 55%;
+
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 0px 14px;
+    margin-left: 2%;
+    gap: 10px;
+
+    cursor: pointer;
+    transition: background -.1s ease-in;
+}
+
+.toolbar-button-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.toolbar-button:hover {
+    background: #333333;
+}

@@ -1,0 +1,44 @@
+.modpack {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    margin: 1rem;
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow .08s ease-in;
+}
+
+.modpack:hover {
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+.modpack-thumbnail {
+    width: 100%;
+    height: 100%;
+}
+
+.modpack-content {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    padding: 4%;
+    gap: 1em;
+    height: 100%;
+}
+
+.modpack-content-name-version {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+.modpack-content-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modpack-content-buttons-delete {
+    cursor: pointer;
+}

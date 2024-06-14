@@ -1,0 +1,240 @@
+.modpack-editor-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    background: var(--bg);
+}
+
+.modpack-editor {
+    position: relative;
+    width: 150vh;
+    height: 85vh;
+    background: transparent;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #fff;
+}
+
+.modpack-editor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px); 
+    z-index: 0; 
+    pointer-events: none; 
+}
+
+.modpack-editor-toolbar, .modpack-editor-toolbar-main {
+    width: 149vh;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+    padding: 0 1vh;
+    border: solid 2px #fff;
+    background: transparent;
+}
+
+.modpack-editor-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modpack-editor-toolbar-main {
+    border: none;
+    width: 1340px;
+}
+
+.modpack-editor-content {
+    position: relative; 
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    padding: 0 2.5%;
+}
+
+.modpack-editor-top {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 4%;
+    margin-top: 2vh;
+}
+
+.modpack-editor-top-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.modpack-editor-top-right-name {
+    max-width: 100%;
+    font-size: 70px;
+    font-family: var(--font-family-secondary);
+}
+
+.modpack-editor-top-right-name.index {
+    font-size: 30px;
+}
+
+.modpack-editor-inputs {
+    background: transparent;
+    width: fit-content;
+    height: fit-content;
+    font-size: 70px;
+    color: #fff;
+    font-family: var(--font-family-secondary);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+
+.modpack-editor-inputs.index {
+    font-size: 30px;
+}
+
+.modpack-editor-top-thumbnail-container {
+    width: 270px;
+    height: 270px;
+}
+
+.modpack-editor-top-thumbnail {
+    height: 270px;
+    width: 270px;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+.modpack-editor-description-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    z-index: 4;
+    overflow: hidden;
+}
+
+.modpack-editor-description-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 105%;
+    min-height: 6.5vh;
+    padding: 0;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background: #2e2e2e2f;
+    border: 2px solid #0000001e;
+    font-family: var(--font-family-secondary);
+}
+
+.modpack-editor-description-header-text {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+.modpack-editor-description-header-text-container {
+    padding: 0 1%;
+}
+
+.modpack-editor-description-header-text-container:not(:last-child) {
+    border-right: 2px solid #fff;
+}
+
+.modpack-editor-description-header-text.selected {
+    border-bottom: 3px solid #fff;
+}
+
+.modpack-editor-rendered-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    width: fit-content;
+    height: fit-content;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 2%;
+}
+
+.modpack-editor-index {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.parsed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    width: fit-content;
+    height: fit-content;
+    overflow-y: auto;
+    font-family: var(--font-family-secondary);
+    color: #fff;
+    overflow-x: hidden;
+    padding-bottom: 2vh;
+    font-family: var(--font-family);
+}
+
+.parsed-content img {
+    max-width: 99% !important;
+    max-height: 99% !important;
+}
+
+.parsed-content p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.parsed-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.image-component img[data-keep-ratio]:not([data-keep-ratio="false"]) {
+    width: auto;
+    height: auto !important;
+    object-fit: contain !important;
+}

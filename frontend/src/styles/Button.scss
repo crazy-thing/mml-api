@@ -1,0 +1,8 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+}

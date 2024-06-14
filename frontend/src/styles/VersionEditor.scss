@@ -1,0 +1,62 @@
+.version-editor {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+}
+
+.version-editor-content {
+    width: 70%;
+    height: 70%;
+}
+
+.version-editor-content-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    gap: 10%;
+
+    width: 100%;
+    height: 200px;
+}
+
+.version-editor-content-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5%;
+}
+
+.version-editor-content-name {
+    width: 200px;
+    padding-left: 10px;
+    height: 40px;
+    background: transparent;
+
+    font-family: var(--font-family);
+    font-size: 20px;
+    outline: none;
+    color: #fff;
+}
+
+.version-editor-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+    gap: 10%;
+    width: 100%;
+}

@@ -1,0 +1,54 @@
+.add-version {
+    width: 1400px;
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.add-version-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.add-version-changelog {
+    width: 100%;
+    min-height: 370px;
+    max-height: 570px;
+}
+
+.add-version-item-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    gap: 8px;
+}
+
+.add-versions-container-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.add-version-item-container-file {
+    width: 400px;
+    height: 130px;
+}
+
+.add-version-item-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-version-buttons {
+    display: flex;
+    flex-direction:  row;
+    gap: 40px;
+
+}

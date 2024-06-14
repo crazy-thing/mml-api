@@ -1,0 +1,29 @@
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #fff;
+    border-radius: 4px;
+    width: 67%;
+    height: 80%;
+    overflow: hidden;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.file-upload.dragging {
+    background-color: rgba(145, 143, 143, 0.534);
+    border-color: rgba(192, 192, 192, 0.534);
+}
+
+.file-upload-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    pointer-events: none;
+}
+
+.file-upload-content-text {
+    font-size: 14px;
+}

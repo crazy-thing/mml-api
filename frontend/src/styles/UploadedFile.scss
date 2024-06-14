@@ -1,0 +1,34 @@
+.uploaded-file {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploaded-file-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.uploaded-file-content-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.uploaded-file-content-info-text,
+.uploaded-file-content-info-delete {
+    margin: 0;
+    font-size: 14px;
+}
+
+.uploaded-file-content-info-delete {
+    cursor: pointer;
+}
+
+.uploaded-file-progress {
+    width: 100%;
+}
