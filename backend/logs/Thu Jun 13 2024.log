@@ -1,8 +1,0 @@
-6/13/2024, 7:24:36 PM - POST /example/v1/authenticate - IP: 127.0.0.1 - Status: 500 - FAILURE - Duration: 4ms
-6/13/2024, 7:24:36 PM - GET /example/v1 - IP: 127.0.0.1 - Status: 200 - SUCCESS - Duration: 43ms
-6/13/2024, 7:24:48 PM - POST /example/v1/authenticate - IP: 127.0.0.1 - Status: 200 - SUCCESS - Duration: 3ms
-6/13/2024, 7:24:48 PM - POST /example/v1/authenticate - IP: 127.0.0.1 - Status: 200 - SUCCESS - Duration: 10ms
-6/13/2024, 7:24:54 PM - POST /example/v1/template - IP: 127.0.0.1 - Status: 201 - SUCCESS - Duration: 47ms
-6/13/2024, 7:24:58 PM - GET /example/v1 - IP: 127.0.0.1 - Status: 200 - SUCCESS - Duration: 42ms
-6/13/2024, 7:25:01 PM - DELETE /example/v1/1718321094306 - IP: 127.0.0.1 - Status: 200 - SUCCESS - Duration: 103ms
-6/13/2024, 7:25:01 PM - GET /example/v1 - IP: 127.0.0.1 - Status: 200 - SUCCESS - Duration: 33ms

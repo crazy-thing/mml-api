@@ -1,6 +1,7 @@
 {
   "name": "Custom Modpacks",
   "version": "1.0.0",
+  "author": "Joshua Powell",
   "description": "",
   "main": "server.js",
   "scripts": {
