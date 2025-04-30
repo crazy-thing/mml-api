@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Berthold';
+    src: url('./assets/blockberthold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#root {
+    --font-family: 'Berthold', sans-serif;
+    --font-family-secondary: 'Anton', sans-serif;
+    font-family: var(--font-family);
+    font-size: 16px;
+
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    --bg: #181818;
+    --button-primary: #2269c5;
+    --input-primary: #2e2e2e;
+    background: var(--bg);
+    
+}
+
+::-webkit-scrollbar {
+    width: .9vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html, body, p {
+    padding: 0;
+    margin: 0;
+}
+
+.app {
+    padding: 0 9.5vh;
+    margin-top: 7.4vh;
+    background: var(--bg);
+}
+
+.app__topbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app__topbar-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7vh;
+}
+
+.app__topbar-create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4vh;
+    width: 33.5vh;
+    height: 9.8vh;
+    border: 0.37vh solid #fff;
+    border-radius: 1.1vh;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+.app__topbar-create-icon {
+    width: 3.8vh;
+    height: 3.8vh;
+}
+
+.app__modpacks {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app__modpacks-row {
+    display: flex;
+    flex-direction: row;
+    gap: 9.2vh;
+    margin-bottom: 5vh;
+}
+
+.app-version {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+    font-size: 1.5vh;
+    color: #707070;
+
+}

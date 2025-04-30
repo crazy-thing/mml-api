@@ -1,0 +1,89 @@
+.modpack {
+    width: 38vh;
+    height: 38vh;
+    transition: box-shadow .04s ease-in;
+    box-shadow: 0 0 0 transparent;
+
+    border-radius: 2.5vh 2.5vh 0 0;
+}
+
+.modpack:hover {
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+.modpack__top {
+    position: relative;
+    width: 100%;
+    height: 78%;
+}
+
+.modpack__top-status {
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    width: 16vh;
+    height: 4.5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2vh;
+
+    background: #252525;
+    border: .27vh solid #a6a6a6;
+    border-radius: 1.2vh;
+    pointer-events: none;
+}
+
+.modpack__top-status.dev {
+    color: #ffc158;
+}
+
+.modpack__top-status.released {
+    color: #49a749;
+}
+
+.modpack__top-status.unreleased {
+    color: #a6a6a6;
+}
+
+
+
+.modpack__top-delete {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    width: 3vh;
+    height: 4.4vh;
+    cursor: pointer;
+}
+
+.modpack__top-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 2.5vh 2.5vh 0 0;
+}
+
+.modpack__bottom {
+    width: 100%;
+    height: 22%;
+    background: #585758;
+    gap: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modpack__bottom-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+    width: 15vh;
+    height: 5vh;
+    border-radius: 2.5vh;
+    background: #3aa3d0;
+    cursor: pointer;
+
+}

@@ -1,0 +1,223 @@
+.modpack-editor {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: #1a1a1a;
+    z-index: 2;
+}
+
+.modpack-editor__background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.modpack-editor__background {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.modpack-editor__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+    width: 100%;
+    height: 14vh;
+    background:#373737;
+
+    border-bottom: #686868 0.55vh solid;
+}
+
+.modpack-editor__top-button {
+    width: 26vh;
+    height: 5.4vh;
+    background: #252525;
+    border-radius: 2.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vh;
+    cursor: pointer;
+}
+
+.modpack-editor__top-button.blue {
+    background: #3aa3d0;
+}
+
+.modpack-editor-bg-text {
+    position: absolute;
+    top: 17vh;
+    right: 2.5vh;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+.modpack-editor__bottom {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modpack-editor__bottom-name-wrapper {
+    margin-top: 11vh;
+    display: inline-block;
+    padding: .5vh 1.2vh .8vh 0vh;
+    width: 100vh;
+    height: 16.5vh;
+    background: #fff;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        95% 50%,
+        100% 100%,
+        0 100%
+      );
+}
+
+.modpack-editor__bottom-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 16.5vh;
+    color: #fff;
+    text-align: center;
+    font-size: 7.5vh;
+    font-family: var(--font-family);
+    background: #373737;
+    border: none;
+    outline: none;
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        95% 50%, 
+        100% 100%, 
+        0 100%
+      );}
+
+
+.modpack-editor__bottom__thumbnail {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.6vh;
+    margin-left: 1.8vh;
+    margin-bottom: 11vh;
+}
+
+.modpack-editor__bottom__thumbnail-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    height: 9.2vh;
+    background: #252525;
+    border: .28vh solid #a6a6a6;
+    border-radius: 1.2vh;
+    font-family: var(--font-family);
+    font-size: 3vh;
+    margin-right: 2vh;
+    cursor: pointer;
+
+}
+
+.modpack-editor__bottom__thumbnail-file {
+    font-size: 2vh;
+}
+
+.modpack-editor__bottom__status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.8vh;
+    gap: 0.7vh;
+}
+
+.modpack-editor__bottom__status-text {
+    font-size: 2.7vh;
+    margin-right: 6vh;
+    color: #fff;
+}
+
+.modpack-editor__bottom__status-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.2vh;
+    height: 4.5vh;
+    font-size: 2vh;
+    background: #252525;
+    border: 0.27vh solid #a6a6a6;
+    border-radius: 1.2vh;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.modpack-editor__bottom__status-option.green {
+    color: #49a749;
+}
+
+.modpack-editor__bottom__status-option.yellow {
+    color: #ffc158;
+}
+
+
+.modpack-editor__bottom__status-option-wrapper {
+    width: 22.2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.modpack-editor__bottom__status-option-icon {
+    width: 3vh;
+    height: 3vh;
+    margin-left: 0.84vh;
+}
+
+.modpack-editor__bottom__jvm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    margin-left: 1.8vh;
+    gap: 1.1vh;
+}
+
+.modpack-editor__bottom__jvm-text {
+    font-size: 3vh;
+    color: #fff;
+}
+
+.modpack-editor__bottom__jvm-input {
+    width: 65.7vh;
+    height: 4.5vh;
+    background: #252525;
+    border-radius: 1.2vh;
+    border: 0.27vh solid #a6a6a6;
+    outline: none;
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 2vh;
+    text-indent: 1vh;
+}
+
+
+

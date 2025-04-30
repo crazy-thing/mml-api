@@ -1,0 +1,131 @@
+
+.editor {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    border: .27vh solid #fff;
+    border-radius: 2.5vh;
+    padding: 0vh 2vh;
+
+    overflow-x: hidden;
+    height: 90%;
+    background: #1e1e1e;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .tiptap.ProseMirror {
+    width: 99%;
+    max-width: 99%;
+    height: 52vh;
+  }
+
+  .editor div:first-child {
+    overflow-y: auto;
+  }
+  
+  .ProseMirror-focused {
+    outline: none;
+    border: none;
+  }
+  
+  .ProseMirror p {
+    margin: 0;
+  }
+
+
+  .tiptap {
+    > * + * {
+      margin-top: 0.75em;
+    }
+  
+    ul,
+    ol {
+      padding: 0 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.1;
+    }
+  
+    code {
+      background-color: rgba(#616161, 0.1);
+      color: #616161;
+    }
+  
+    pre {
+      background: #0D0D0D;
+      color: #FFF;
+      font-family: 'JetBrainsMono', monospace;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+  
+      code {
+        color: inherit;
+        padding: 0;
+        background: none;
+        font-size: 0.8rem;
+      }
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    blockquote {
+      padding-left: 1rem;
+      border-left: 2px solid rgba(#0D0D0D, 0.1);
+    }
+  
+    hr {
+      border: none;
+      border-top: 2px solid rgba(#0D0D0D, 0.1);
+      margin: 2rem 0;
+    }
+  }
+  
+  .menu-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
+    padding: 1vh 2vh;
+    background-color: #f5f5f5;
+    margin-left: -2vh;
+    margin-bottom: 1.5vh;
+  }
+  
+  .menu-buttons button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-buttons button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .menu-buttons button.is-active {
+    background-color: #ccc;
+  }
+  
+  .menu-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .menu-buttons img {
+    width: 2vh;
+    height: 2vh;
+  }
+  
