@@ -40,7 +40,7 @@ app.use(helmet({
     contentSecurityPolicy: {
         directives: {
             defaultSrc: ["'self'"],
-            connectSrc: ["'self'", "http://localhost:10000", "https://localhost:10000", "http://localhost", "https://localhost"],
+            connectSrc: ["'self'", "http://localhost:10000", "https://localhost:10000", "http://localhost", "https://localhost", ""],
             imgSrc: ["*", "data:", "blob:"],
             upgradeInsecureRequests: null
         },

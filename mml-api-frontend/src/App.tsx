@@ -20,7 +20,7 @@ function App() {
 
     const createModpackTemp = async () => {
       try {
-        const newModpack = await createTemplateModpack(`${import.meta.env.VITE_IP}`, localStorage.getItem('api-key') as string);
+        const newModpack = await createTemplateModpack(`${import.meta.env.VITE_IP}`, localStorage.getItem('apiKey') as string);
         setModpacks([...modpacks, newModpack]);
         setSelectedModpack(newModpack);
         setShowCreateModpack(true);

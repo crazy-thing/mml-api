@@ -1,9 +1,10 @@
 export const authenticateApiKey = async (apiKey: string, baseUrl: string) => {
     try {
+        console.log(`Authenticating api key: ${apiKey}`);
         const res = await fetch (`${baseUrl}/authenticate`, {
             method: 'POST',
             headers: {
-                'x-api-key': apiKey.toString(),
+                'x-api-key': apiKey,
             }
         });
 

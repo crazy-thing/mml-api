@@ -47,7 +47,7 @@ const Versions = ({modpack, setShowVersions, setSelectedModpack }: VersionsProps
             modpack.id as string,
             { [item]: value },
             `${import.meta.env.VITE_IP}/`,
-            localStorage.getItem('api-key') as string,
+            localStorage.getItem('apiKey') as string,
             setProgress
         ) as { updatedModpack: ModpackType };
 

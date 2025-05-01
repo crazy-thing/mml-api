@@ -78,7 +78,7 @@ const VersionEditor = ({setShowVersionEditor, ver, modpackId, setSelectedModpack
             await new Promise<void>((resolve, reject) => {
                 const xhr = new XMLHttpRequest();
                 xhr.open('POST', `${import.meta.env.VITE_IP}/upload`);
-                xhr.setRequestHeader('x-api-key', localStorage.getItem('api-key') as string);
+                xhr.setRequestHeader('x-api-key', localStorage.getItem('apiKey') as string);
     
                 xhr.onload = () => {
                     if (xhr.status >= 200 && xhr.status < 300) {
@@ -127,7 +127,7 @@ const VersionEditor = ({setShowVersionEditor, ver, modpackId, setSelectedModpack
                 modpackId ?? '',
                 { versions: updatedVersions },
                 `${import.meta.env.VITE_IP}/`,
-                localStorage.getItem('api-key') as string,
+                localStorage.getItem('apiKey') as string,
                 setProgress
             ) as { updatedModpack: ModpackType };
     

@@ -16,7 +16,7 @@ const Modpack = ({ modpack, fetchModpacks, editModpack, editVersions }: ModpackP
     e.stopPropagation();
     const confirmDelete = window.confirm('Are you sure you want to delete this modpack?');
     if (confirmDelete) {
-        await deleteModpack(modpack.id as string, `${import.meta.env.VITE_IP}`, localStorage.getItem('api-key') as string);
+        await deleteModpack(modpack.id as string, `${import.meta.env.VITE_IP}`, localStorage.getItem('apiKey') as string);
         console.log("deleted modpack");
         fetchModpacks();
     }
