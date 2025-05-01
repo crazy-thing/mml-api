@@ -15,3 +15,4 @@ npm-debug.log*
 *.sw?
 apiToken.json
 config.json
+*.env

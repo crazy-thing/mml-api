@@ -4,7 +4,7 @@ const crypto = require('crypto');
 
 const apiTokenPath = path.join(process.cwd(), './apiToken.json');
 
-const checkApiToken = (callback) => {
+const checkApiToken = async () => {
     if (fs.existsSync(apiTokenPath)) {
         fs.readFile(apiTokenPath, 'utf8', (err, data) => {
             if (err) {
@@ -17,10 +17,9 @@ const checkApiToken = (callback) => {
                     const newToken = generateToken();
                     apiToken.token = newToken;
                     console.log(`Generated API Key: ${newToken}`);
-                    writeTokenToFile(apiToken, callback);
+                    writeTokenToFile(apiToken);
                 } else {
                     console.log(`Existing API Key: ${apiToken.token}`);
-                    callback();
                 }
             } catch (parseError) {
                 console.error('Error parsing API token file:', parseError);
@@ -30,7 +29,7 @@ const checkApiToken = (callback) => {
         const newToken = generateToken();
         const apiToken = { token: newToken };
         console.log(`Generated API Key: ${newToken}`);
-        writeTokenToFile(apiToken, callback);
+        writeTokenToFile(apiToken);
     }
 }
 
@@ -38,7 +37,7 @@ const generateToken = () => {
     return crypto.randomBytes(64).toString('hex');
 }
 
-const writeTokenToFile = (apiToken, callback) => {
+const writeTokenToFile = (apiToken) => {
     const jsonData = JSON.stringify(apiToken, null, 4); 
     fs.writeFile(apiTokenPath, jsonData, (err) => {
         if (err) {
@@ -46,7 +45,6 @@ const writeTokenToFile = (apiToken, callback) => {
         } else {
             console.log('API token file created successfully');
         }
-        callback();
     });
 }
 
