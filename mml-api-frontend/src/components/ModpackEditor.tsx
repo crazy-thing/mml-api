@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ModpackType } from '../types/Modpack'
 import '../styles/ModpackEditor.scss'
-import { star } from '../assets/exports'
+import { star, trash2 } from '../assets/exports'
 import { editModpack } from '../util/api'
 
 interface ModpackEditorProps {
@@ -63,18 +63,29 @@ const ModpackEditor = ({ modpack, fetchModpacks, setShowCreateModpack }: Modpack
                 <span className='modpack-editor__top-button blue' onClick={() => setShowCreateModpack(false)}> SAVE </span>
             </div>
 
-            <p
-                className='modpack-editor-bg-text'
-                onClick={() => {
-                    const background = document.getElementById('backgroundInput');
-                    if (background) (background as HTMLInputElement).click();
-                }}
-            >
-                CLICK TO UPLOAD
-            </p>
+            <span className='modpack-editor-bg-text'>
+                {mp && mp.background ? (
+                    <img
+                        className='modpack-editor-bg-delete'
+                        src={trash2}
+                        onClick={() => handleSave("background", "")}
+                    />
+                ) : (
+                    <p
+                        onClick={() => {
+                            const background = document.getElementById('backgroundInput');
+                            if (background) (background as HTMLInputElement).click();
+                        }}
+                    >
+                        CLICK TO UPLOAD
+                    </p>
+                )}
+
+            </span>
+
 
             <div className='modpack-editor__bottom'>
-                {mp.background && (
+                {mp && mp.background && (
                     <div className='modpack-editor__background-wrapper'>
                         <img
                             className='modpack-editor__background'
@@ -95,6 +106,7 @@ const ModpackEditor = ({ modpack, fetchModpacks, setShowCreateModpack }: Modpack
                 </div>
 
                 <div className='modpack-editor__bottom__thumbnail'>
+
                     <span
                         className='modpack-editor__bottom__thumbnail-button'
                         onClick={() => {
@@ -102,11 +114,16 @@ const ModpackEditor = ({ modpack, fetchModpacks, setShowCreateModpack }: Modpack
                             if (thumbnail) (thumbnail as HTMLInputElement).click();
                         }}
                     >
-                        CLICK TO UPLOAD
+                        {mp && mp.thumbnail ? (
+                        <img
+                            className='modpack-editor__bottom__thumbnail-image'
+                            src={`${import.meta.env.VITE_UPLOADS}/thumbnails/${mp.thumbnail}`}
+                        />
+                        ) : (
+                            <p>CLICK TO UPLOAD</p>
+                        )}
                     </span>
-                    <p className='modpack-editor__bottom__thumbnail-file'>
-                        {mp.thumbnail && `Thumbnail: ${mp.thumbnail}`}
-                    </p>
+                    {mp && mp.thumbnail && (<img src={trash2} className='modpack-editor__bottom__thumbnail-delete' onClick={() => handleSave("thumbnail", "")} /> )}
                 </div>
 
                 <div className='modpack-editor__bottom__status'>

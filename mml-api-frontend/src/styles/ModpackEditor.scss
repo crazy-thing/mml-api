@@ -65,6 +65,11 @@
     cursor: pointer;
 }
 
+.modpack-editor-bg-delete {
+    width: 3vh;
+    height: 4vh;
+}
+
 .modpack-editor__bottom {
     height: 85vh;
     display: flex;
@@ -111,13 +116,12 @@
 
 
 .modpack-editor__bottom__thumbnail {
-    width: auto;
+    width: 45vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 1.6vh;
     margin-left: 1.8vh;
-    margin-bottom: 11vh;
+    margin-bottom: 6vh;
 }
 
 .modpack-editor__bottom__thumbnail-button {
@@ -125,10 +129,10 @@
     justify-content: center;
     align-items: center;
     width: 30vh;
-    height: 9.2vh;
+    height: 13vh;
     background: #252525;
     border: .28vh solid #a6a6a6;
-    border-radius: 1.2vh;
+    border-radius: 0 0 1.2vh 1.2vh;
     font-family: var(--font-family);
     font-size: 3vh;
     margin-right: 2vh;
@@ -136,8 +140,17 @@
 
 }
 
-.modpack-editor__bottom__thumbnail-file {
-    font-size: 2vh;
+.modpack-editor__bottom__thumbnail-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 1.2vh 1.2vh;
+    object-fit: cover;
+}
+
+.modpack-editor__bottom__thumbnail-delete {
+    width: 3vh;
+    height: 4vh;
+    cursor: pointer;
 }
 
 .modpack-editor__bottom__status {
