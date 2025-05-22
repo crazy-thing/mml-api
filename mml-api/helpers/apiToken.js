@@ -2,7 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const apiTokenPath = path.join(process.cwd(), './apiToken.json');
+// Ensure the apiToken directory exists
+const apiTokenDir = path.join(process.cwd(), 'apiToken');
+if (!fs.existsSync(apiTokenDir)) {
+    fs.mkdirSync(apiTokenDir, { recursive: true });
+}
+
+const apiTokenPath = path.join(process.cwd(), 'apiToken/apiToken.json');
 
 const checkApiToken = async () => {
     if (fs.existsSync(apiTokenPath)) {

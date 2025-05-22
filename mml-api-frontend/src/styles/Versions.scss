@@ -1,98 +1,3 @@
-/*
-.versions {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background: #1a1a1a;
-    z-index: 2;
-}
-
-.versions__top {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 3vh;
-    width: 100%;
-    height: 14vh;
-    background: #373737;
-    border-bottom: #686868 0.55vh solid;
-}
-
-.versions__top-button {
-    width: 26vh;
-    height: 5.4vh;
-    background: #252525;
-    border-radius: 2.5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.7vh;
-    cursor: pointer;
-}
-
-.versions__top-button.blue {
-    background: #3aa3d0;
-}
-
-.versions__bottom {
-    display: flex;
-    width: 100%;
-    height: 86vh;
-}
-
-.versions__bottom__left {
-    display: flex;
-    justify-content: center;
-    width: 55%;
-    max-height: 86vh;
-    overflow-y: auto;
-}
-
-
-.versions__bottom__left-table {
-    margin-top: 5vh;
-    width: 85vh;
-    border-collapse: collapse;
-}
-
-.versions__bottom__left-table tr {
-    width: 100%;;
-}
-
-.versions__bottom__left-table-head th {
-    padding: 1vh 0;
-    text-align: center;
-    font-size: 3vh;
-}
-
-.versions__bottom__left-table-head {
-    border-bottom: #a6a6a6 0.4vh solid;
-}
-
-.versions__bottom__left-table-body td {
-    padding: 1vh 0;
-    text-align: center;;
-    border-bottom: #a6a6a6 .4vh solid;
-    font-size: 2.5vh;
-}
-
-.empty {
-    background: transparent;
-    border: 1vh solid #1a1a1a;
-}
-
-.versions__bottom__left-table img {
-    width: 3vh;
-    height: 3vh;
-    cursor: pointer;
-}
-
-*/
 
 .versions {
     position: absolute;
@@ -148,7 +53,7 @@
 }
 
 .versions__bottom__left {
-    width: 113vh;
+    width: 55%;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -159,7 +64,7 @@
     justify-content: center;
     align-items: flex-start;
     margin-left: 4vh;
-    width: 100vh;
+    width: 90%;
     border-radius: 2vh;
     border: .27vh solid #a6a6a6;
 }
@@ -223,14 +128,14 @@
 
 
 .versions__bottom__right {
-    width: 90vh;
+    width: 45%;
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
 .versions__bottom__right-changelog {
-    width: 80vh;
+    width: 90%;
     height: 80vh;
     border: .27vh solid #a6a6a6;
     border-radius: 2.5vh;

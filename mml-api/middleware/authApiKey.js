@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const apiTokenFilePath = path.join(process.cwd(), './apiToken.json');
+const apiTokenDir = path.join(process.cwd(), 'apiToken');
+if (!fs.existsSync(apiTokenDir)) {
+    fs.mkdirSync(apiTokenDir, { recursive: true });
+}
+const apiTokenFilePath = path.join(process.cwd(), 'apiToken/apiToken.json');
 
 const authenticateApiKey = (req, res, next) => {
     fs.readFile(apiTokenFilePath, 'utf8', (err, data) => {

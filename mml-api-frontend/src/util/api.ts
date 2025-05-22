@@ -70,6 +70,7 @@ export const editModpack = async (modpackId: string, updatedFields: any, baseUrl
                     formData.append('mainVersion[status]', '');
                     formData.append('mainVersion[visible]', '');
                     formData.append('mainVersion[jvmArgs]', '');
+                    formData.append('mainVersion[clean]', '');
                 } else {
                     formData.append('mainVersion[name]', main.name);
                     formData.append('mainVersion[id]', main.id);
@@ -80,6 +81,7 @@ export const editModpack = async (modpackId: string, updatedFields: any, baseUrl
                     formData.append('mainVersion[status]', main.status);
                     formData.append('mainVersion[visible]', main.visible);
                     formData.append('mainVersion[jvmArgs]', main.jvmArgs);
+                    formData.append('mainVersion[clean]', main.clean);
                 }
             } else if (key === 'versions') {
                 const versions = updatedFields.versions;

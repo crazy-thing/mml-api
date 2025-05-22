@@ -1,4 +1,6 @@
 /uploads/*
+/apiToken/*
+/build/*
 !/uploads/.gitkeep
 node_modules
 logs

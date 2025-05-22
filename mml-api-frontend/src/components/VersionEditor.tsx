@@ -57,6 +57,7 @@ const VersionEditor = ({setShowVersionEditor, ver, modpackId, setSelectedModpack
 
     const handleFileChange = async (file: File) => {
         setVersion(prev => ({ ...prev, zip: file.name }));
+        setVersion(prev => ({ ...prev, size: file.size.toString()}));
     
         const CHUNK_SIZE = 5 * 1024 * 1024; // 5 MB
         const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
